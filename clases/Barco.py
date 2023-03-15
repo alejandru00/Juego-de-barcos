@@ -1,6 +1,10 @@
 from clases.Tablero import *
 from clases.Case import *
 from clases.Conventions import *
+from itertools import repeat, product
+from random import choice
+from ..juego import HORIZONTAL, VERTICAL, ORIENTACIONES, Barco, Case, Conventions
+from decimal import Decimal, getcontext, ConversionSyntax, ROUND_HALF_UP, ROUND_HALF_EVEN, ROUND_HALF_DOWN, ROUND_UP, ROUND_DOWN, ROUND_CEILING, ROUND_FLOOR, ROUND_05UP
 
 instances = []
 casillas_ocupadas = set()
