@@ -1,4 +1,7 @@
 # Juego-de-barcos
+
+***************
+
 # Nombre de usuario: alejandru00
 # Link del repositorio:
 [Github: https://github.com/alejandru00/Juego-de-barcos.git]
