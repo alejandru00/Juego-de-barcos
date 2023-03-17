@@ -1,6 +1,4 @@
-from clases.Tablero import *
-from clases.Case import *
-from clases.Conventions import *
+
 from itertools import repeat, product
 from random import choice
 from ..juego import HORIZONTAL, VERTICAL, ORIENTACIONES, Barco, Case, Conventions
