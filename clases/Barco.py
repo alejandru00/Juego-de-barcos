@@ -1,7 +1,8 @@
 
 from itertools import repeat, product
 from random import choice
-from ..juego import HORIZONTAL, VERTICAL, ORIENTACIONES, Barco, Case, Conventions
+from typing import Self
+from juego import HORIZONTAL, VERTICAL, ORIENTACIONES, Barco, Case, Conventions
 from decimal import Decimal, getcontext, ConversionSyntax, ROUND_HALF_UP, ROUND_HALF_EVEN, ROUND_HALF_DOWN, ROUND_UP, ROUND_DOWN, ROUND_CEILING, ROUND_FLOOR, ROUND_05UP
 
 instances = []
@@ -36,20 +37,20 @@ def __init__(self, longitud):
                 self.casillas = {Case.instances[l + c]
                               for l, c in product(letras, repeat(cifra, longitud))}
 
-            for existente in Barco.instances:
+            for existente in instances:
                 if self.casillas.intersection(existente.casillas):
                     break  # break relativo al "for existente in barcos:"
             else:
                 # Agregar el barco en el contenedor de barcos
-                Barco.instances.append(self)
+                instances.append(self)
                 # Informar la casilla que contiene un barco.
                 for casilla in self.casillas:
                     casilla.barco = self
                 # Agregar estas casillas a las casillas ocupadas :
-                Barco.casillas_ocupadas |= self.casillas
+                casillas_ocupadas |= self.casillas
                 break  # break relativo al "while True:"
 
 @classmethod
-def generar_barcos(cls):
+def generar_barcos(self, cls):
         for longitud in Conventions.barcos_longitud:
-            Barco(longitud)
+            self.longigudido = longitud

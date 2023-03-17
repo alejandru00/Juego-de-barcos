@@ -3,7 +3,7 @@ from unittest import case
 from itertools import product
 from clases import Barco
 from clases.Conventions import tablero_num_lineas, tablero_num_columnas
-from ..juego import CASO_AGUA, CASO_NO_JUGADO, CASO_TOCADO, probar_fin_juego, jugar_tirada
+from juego import CASO_AGUA, CASO_NO_JUGADO, CASO_TOCADO, probar_fin_juego, jugar_tirada
 
 
 
@@ -19,6 +19,8 @@ def __init__(self, x, y):
   instances[x, y] = self
   
   # Generación del nombre de la casilla
+
+
   self._generar_nombre()
   # Queremos poder acceder a una casilla a partir de su nombre
   instances[self.nombre] = self
