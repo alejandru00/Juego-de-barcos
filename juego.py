@@ -4,7 +4,6 @@ from clases import Case, Barco, Tablero, Conventions
 from itertools import cycle, chain, product, repeat
 from functools import reduce
 from random import shuffle, choice, random
-from clases import Case, Barco, Tablero, Conventions
 
 
 from introducir import (

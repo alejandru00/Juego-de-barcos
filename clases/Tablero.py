@@ -5,8 +5,7 @@ from clases import Case, Conventions
 from itertools import product
 
 
-
-
+@classmethod
 def __init__(self):
 # Creamos las casillas:
   generar_casillas()
