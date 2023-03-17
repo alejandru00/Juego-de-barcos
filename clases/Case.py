@@ -1,9 +1,8 @@
-from clases.Tablero import *
-from clases.Barco import *
-from clases.Conventions import *
+from clases.Conventions import generar_nombre_casilla
 from unittest import case
 from itertools import product
 from clases import Barco
+from clases.Conventions import tablero_num_lineas, tablero_num_columnas
 from ..juego import CASO_AGUA, CASO_NO_JUGADO, CASO_TOCADO, probar_fin_juego, jugar_tirada
 
 
