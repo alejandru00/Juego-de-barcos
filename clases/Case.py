@@ -8,6 +8,7 @@ from juego import CASO_AGUA, CASO_NO_JUGADO, CASO_TOCADO, probar_fin_juego, juga
 
 
 
+
 instances = {}
 jugadas = set()
 
@@ -15,13 +16,13 @@ def __init__(self, x, y):
   # Adición de las coordenadas
   self.x = x
   self.y = y
+
   # Queremos poder acceder a una casilla a partir de sus coordenadas
   instances[x, y] = self
   
   # Generación del nombre de la casilla
-
-
   self._generar_nombre()
+  
   # Queremos poder acceder a una casilla a partir de su nombre
   instances[self.nombre] = self
   
